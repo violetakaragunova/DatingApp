@@ -32,7 +32,7 @@ namespace API.Controllers
 
             var thingToReturn = thing.ToString();
 
-            return thingToReturn;
+            return BadRequest(thingToReturn);
         }
 
         [HttpGet("bad-request")]
