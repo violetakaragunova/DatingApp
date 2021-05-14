@@ -7,7 +7,6 @@ import { ControlValueAccessor, NgControl } from '@angular/forms';
   styleUrls: ['./text-input.component.css']
 })
 export class TextInputComponent implements ControlValueAccessor {
-  @Input() name: string;
   @Input() label: string;
   @Input() type = 'text';
 
