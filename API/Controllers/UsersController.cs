@@ -30,6 +30,7 @@ namespace API.Controllers
             _photoService = photoService;
         }
 
+
         [HttpGet]
         public async Task<ActionResult<IEnumerable<MemberDto>>> GetUsers([FromQuery]UserParams userParams)
         {
@@ -49,6 +50,7 @@ namespace API.Controllers
             return Ok(users);
         }
 
+        
         [HttpGet("{username}", Name = "GetUser")]
         public async Task<ActionResult<MemberDto>> GetUser(string username)
         {
@@ -149,8 +151,7 @@ namespace API.Controllers
             if( await _userRepository.SaveAllAsync()) return Ok();
 
             return BadRequest("Failed to delete photo");
-        }
-
-
+        }     
+       
     }
 }
